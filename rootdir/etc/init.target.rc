@@ -131,6 +131,10 @@ on boot
     # init the  cpuset value for the camera background,don't change the oder
     write /dev/cpuset/camera-background/background/cpus 0-2
     write /dev/cpuset/camera-background/cpus 0-3
+
+    # Freezer setup
+    write /dev/freezer/frozen/freezer.killable 1
+
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
