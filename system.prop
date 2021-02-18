@@ -29,6 +29,10 @@ persist.vendor.ims.disableDebugLogs=1
 persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.disableQXDMLogs=1
 
+# LMKD
+ro.config.low_ram=false
+ro.lmk.log_stats=true
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
