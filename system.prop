@@ -54,7 +54,6 @@ ril.subscription.types=NV,RUIM
 # SkiaGL Threaded
 debug.renderengine.backend=skiaglthreaded
 debug.hwui.renderer=skiagl
-renderthread.skia.reduceopstasksplitting=true
 
 # Radio Powersaving
 persist.radio.add_power_save=1
