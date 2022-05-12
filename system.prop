@@ -17,6 +17,9 @@ arm64.memtag.process.system_server=off
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
 
+# HWUI
+debug.hwui.skia_atrace_enabled=false
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
