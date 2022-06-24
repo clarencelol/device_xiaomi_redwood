@@ -8,6 +8,8 @@ DEVICE_PATH := device/xiaomi/redwood
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+# GOOGLE: workaround for https://android-review.googlesource.com/c/platform/system/sepolicy/+/1532995
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # A/B
 AB_OTA_UPDATER := true
