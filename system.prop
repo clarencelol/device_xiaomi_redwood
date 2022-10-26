@@ -51,6 +51,11 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
 
+# SkiaGL Threaded
+debug.renderengine.backend=skiaglthreaded
+debug.hwui.renderer=skiagl
+renderthread.skia.reduceopstasksplitting=true
+
 # Radio Powersaving
 persist.radio.add_power_save=1
 pm.sleep_mode=1
