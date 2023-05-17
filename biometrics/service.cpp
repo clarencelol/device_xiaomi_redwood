@@ -28,6 +28,7 @@ using android::hardware::biometrics::fingerprint::V2_3::IBiometricsFingerprint;
 using android::hardware::biometrics::fingerprint::V2_3::implementation::BiometricsFingerprint;
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
+using android::hardware::setMinSchedulerPolicy;
 using android::sp;
 using vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
 
@@ -36,6 +37,7 @@ int main() {
     android::sp<IXiaomiFingerprint> xfe = BiometricsFingerprint::getXiaomiInstance();
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
+    setMinSchedulerPolicy(bio, SCHED_NORMAL, -20);
 
     if (bio != nullptr) {
         if (::android::OK != bio->registerAsService()) {
