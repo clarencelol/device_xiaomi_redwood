@@ -157,7 +157,7 @@ BOARD_VENDOR := xiaomi
 TARGET_BOARD_PLATFORM := lahaina
 
 # Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/double_tap"
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
