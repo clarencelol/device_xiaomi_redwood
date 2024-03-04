@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_redwood.mk
+    $(LOCAL_DIR)/tequila_redwood.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_redwood-user \
-    lineage_redwood-userdebug \
-    lineage_redwood-eng
+    tequila_redwood-user \
+    tequila_redwood-userdebug \
+    tequila_redwood-eng
