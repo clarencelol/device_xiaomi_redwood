@@ -4,6 +4,36 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
+    override
+    class early_hal
+    user nfc
+    group nfc
+    disabled
+
+service qti_esepowermanager_service_1_1 /vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
+    override
+    class early_hal
+    user nfc
+    group nfc
+    disabled
+
+service secureelement-hal_1_2 /vendor/bin/hw/vendor.qti.secure_element@1.2-service
+    override
+    class early_hal
+    user nfc
+    group nfc
+    disabled
+
+on post-fs-data && property:ro.boot.product.hardware.sku=redwood
+    mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc/param 0770 nfc nfc
+
+on boot && property:ro.boot.product.hardware.sku=redwood
+    enable vendor.nfc_hal_service
+    enable qti_esepowermanager_service_1_1
+    enable secureelement-hal_1_2
+
 on boot && property:ro.boot.hwc=CN
     setprop bluetooth.device.default_name "Redmi Note 12 Pro Speed"
 
