@@ -120,8 +120,8 @@
       "Name": "UclampTAMin",
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
-        "52",
-        "36",
+        "50",
+        "30",
         "0"
       ],
       "DefaultIndex": 0,
@@ -262,7 +262,7 @@
       "PowerHint": "INTERACTION",
       "Node": "UclampTAMin",
       "Duration": 0,
-      "Value": "36"
+      "Value": "30"
     },
     {
       "PowerHint": "INTERACTION",
@@ -376,7 +376,7 @@
       "PowerHint": "LAUNCH",
       "Node": "UclampTAMin",
       "Duration": 3000,
-      "Value": "52"
+      "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
